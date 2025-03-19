@@ -1,0 +1,40 @@
+/* CSS cho trang tìm học sinh để tạo phiếu mượn */
+
+.table-success {
+    background-color: #00a65a !important;
+    color: white;
+}
+
+/* Table styles */
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 500;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Search button */
+.btn-success {
+    background-color: #00a65a;
+    border-color: #008d4c;
+}
+
+.btn-success:hover {
+    background-color: #008d4c;
+    border-color: #00733e;
+}
+
+/* Action button */
+.btn-outline-primary {
+    color: #3c8dbc;
+    border-color: #3c8dbc;
+}
+
+.btn-outline-primary:hover {
+    background-color: #3c8dbc;
+    border-color: #367fa9;
+    color: white;
+} 

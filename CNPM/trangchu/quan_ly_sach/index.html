@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sách - Hệ thống quản lý thư viện</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="d-flex flex-column min-vh-100">
+        <!-- Header với logo trường -->
+        <header class="bg-white border-bottom py-2">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <img src="../Logo_PTIT_University.png" alt="Logo trường" class="logo-header">
+                        <div class="ms-3">
+                            <h5 class="mb-0 text-primary fw-bold">Học viện Công nghệ Bưu Chính Viễn Thông</h5>
+                            <small class="text-muted">Bộ Khoa học và Công nghệ</small>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="../../dangnhap/index.html" class="btn btn-outline-danger btn-sm">
+                            <i class="fas fa-sign-out-alt me-1"></i>Đăng xuất
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main content container -->
+        <div class="d-flex flex-grow-1">
+            <!-- Sidebar -->
+            <nav class="sidebar bg-dark text-white py-3">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../index.html">
+                                <i class="fas fa-home me-2"></i> Trang chủ
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../tao_phieu_muon/index.html">
+                                <i class="fas fa-file-alt me-2"></i> Tạo phiếu mượn
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../quan_ly_hoc_sinh/index.html">
+                                <i class="fas fa-user-graduate me-2"></i> Quản lý học sinh
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" href="index.html">
+                                <i class="fas fa-book me-2"></i> Quản lý sách
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../quan_ly_nhan_vien/index.html">
+                                <i class="fas fa-users me-2"></i> Quản lý nhân viên
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <main class="flex-grow-1 bg-light p-4">
+                <h2 class="mb-4">Quản lý sách</h2>
+                
+                <!-- Button to add new book -->
+                <div class="mb-3">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addBookModal">
+                        <i class="fas fa-plus me-1"></i> Thêm sách mới
+                    </button>
+                </div>
+
+                <!-- Books table -->
+                <div class="table-responsive bg-white shadow-sm">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-success">
+                            <tr>
+                                <th>Tiêu đề</th>
+                                <th>Mô tả</th>
+                                <th>Thể loại</th>
+                                <th>Tác giả</th>
+                                <th>Ảnh bìa</th>
+                                <th>Ngày xuất bản</th>
+                                <th>Số bản</th>
+                                <th>Hoạt động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>New World</td>
+                                <td>new book</td>
+                                <td>1</td>
+                                <td>Huan</td>
+                                <td>
+                                    <img src="book-cover-1.jpg" alt="Book cover" class="book-cover">
+                                </td>
+                                <td></td>
+                                <td>10</td>
+                                <td>
+                                    <button class="btn btn-sm btn-warning me-1 edit-book-btn">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-danger">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>New 1</td>
+                                <td>new 1</td>
+                                <td>2</td>
+                                <td>Huan Hoang</td>
+                                <td>
+                                    <img src="book-cover-2.jpg" alt="Book cover" class="book-cover">
+                                </td>
+                                <td></td>
+                                <td>9</td>
+                                <td>
+                                    <button class="btn btn-sm btn-warning me-1 edit-book-btn">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-danger">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>title</td>
+                                <td>desc</td>
+                                <td>1</td>
+                                <td>author</td>
+                                <td>
+                                    <img src="book-cover-3.jpg" alt="Book cover" class="book-cover">
+                                </td>
+                                <td>2023-12-01T00:00:00.000Z</td>
+                                <td>11</td>
+                                <td>
+                                    <button class="btn btn-sm btn-warning me-1 edit-book-btn">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-danger">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal thêm sách mới -->
+    <div class="modal fade" id="addBookModal" tabindex="-1" aria-labelledby="addBookModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="addBookModalLabel">Thêm sách mới</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addBookForm">
+                        <div class="mb-3">
+                            <label for="inputTitle" class="form-label">Tiêu đề</label>
+                            <input type="text" class="form-control" id="inputTitle" placeholder="Tiêu đề" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputAuthor" class="form-label">Tác giả</label>
+                            <input type="text" class="form-control" id="inputAuthor" placeholder="Tác giả" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputDate" class="form-label">Ngày xuất bản</label>
+                            <input type="date" class="form-control" id="inputDate">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputCopies" class="form-label">Số bản</label>
+                            <input type="number" class="form-control" id="inputCopies" min="1" value="1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputCover" class="form-label">Ảnh bìa</label>
+                            <input type="file" class="form-control" id="inputCover" accept="image/*">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputCategory" class="form-label">Thể loại</label>
+                            <select class="form-select" id="inputCategory">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputDescription" class="form-label">Mô tả</label>
+                            <textarea class="form-control" id="inputDescription" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-primary" id="btnAddBook">Thêm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal chỉnh sửa sách -->
+    <div class="modal fade" id="editBookModal" tabindex="-1" aria-labelledby="editBookModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="editBookModalLabel">Chỉnh sửa thông tin sách</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editBookForm">
+                        <div class="mb-3">
+                            <label for="editTitle" class="form-label">Tiêu đề</label>
+                            <input type="text" class="form-control" id="editTitle" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editAuthor" class="form-label">Tác giả</label>
+                            <input type="text" class="form-control" id="editAuthor" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editDate" class="form-label">Ngày xuất bản</label>
+                            <input type="date" class="form-control" id="editDate">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editCopies" class="form-label">Số bản</label>
+                            <input type="number" class="form-control" id="editCopies" min="1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editCover" class="form-label">Ảnh bìa</label>
+                            <input type="file" class="form-control" id="editCover" accept="image/*">
+                            <div class="mt-2">
+                                <img id="currentCoverPreview" src="" alt="Current cover" style="max-width: 100px; max-height: 150px; display: none;">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editCategory" class="form-label">Thể loại</label>
+                            <select class="form-select" id="editCategory">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editDescription" class="form-label">Mô tả</label>
+                            <textarea class="form-control" id="editDescription" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-primary" id="btnSaveEdit">Lưu thay đổi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Biến lưu trữ dòng hiện tại đang được chỉnh sửa
+        let currentEditRow = null;
+        let currentCoverPath = "";
+
+        // Xử lý sự kiện khi nhấn nút Thêm
+        document.getElementById('btnAddBook').addEventListener('click', function() {
+            // Lấy giá trị từ form
+            const title = document.getElementById('inputTitle').value;
+            const author = document.getElementById('inputAuthor').value;
+            const date = document.getElementById('inputDate').value;
+            const copies = document.getElementById('inputCopies').value;
+            const category = document.getElementById('inputCategory').value;
+            const description = document.getElementById('inputDescription').value;
+            
+            // Kiểm tra dữ liệu
+            if (!title || !author || !copies) {
+                alert('Vui lòng điền đầy đủ thông tin bắt buộc!');
+                return;
+            }
+            
+            // Xử lý file ảnh bìa
+            let coverUrl = "book-cover-1.jpg"; // Default cover
+            const fileInput = document.getElementById('inputCover');
+            if (fileInput.files && fileInput.files[0]) {
+                // Thực tế cần upload file lên server
+                // Ở đây chỉ giả lập bằng cách sử dụng URL tạm thời
+                coverUrl = URL.createObjectURL(fileInput.files[0]);
+            }
+            
+            // Tạo dòng mới cho bảng
+            const tableBody = document.querySelector('table tbody');
+            const newRow = document.createElement('tr');
+            
+            // Thêm nội dung cho dòng mới
+            newRow.innerHTML = `
+                <td>${title}</td>
+                <td>${description}</td>
+                <td>${category}</td>
+                <td>${author}</td>
+                <td>
+                    <img src="${coverUrl}" alt="Book cover" class="book-cover">
+                </td>
+                <td>${date}</td>
+                <td>${copies}</td>
+                <td>
+                    <button class="btn btn-sm btn-warning me-1 edit-book-btn">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    <button class="btn btn-sm btn-danger">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </td>
+            `;
+            
+            // Thêm dòng mới vào cuối bảng
+            tableBody.appendChild(newRow);
+            
+            // Đóng modal
+            var modal = bootstrap.Modal.getInstance(document.getElementById('addBookModal'));
+            modal.hide();
+            
+            // Reset form
+            document.getElementById('addBookForm').reset();
+        });
+        
+        // Xử lý sự kiện khi nhấn nút chỉnh sửa (bút màu vàng)
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.edit-book-btn')) {
+                // Lấy dòng chứa nút được nhấn
+                const row = e.target.closest('tr');
+                currentEditRow = row;
+                
+                // Lấy thông tin sách từ dòng hiện tại
+                const cells = row.querySelectorAll('td');
+                const title = cells[0].textContent;
+                const description = cells[1].textContent;
+                const category = cells[2].textContent;
+                const author = cells[3].textContent;
+                const coverImg = cells[4].querySelector('img');
+                const date = cells[5].textContent;
+                const copies = cells[6].textContent;
+                
+                // Lưu đường dẫn ảnh bìa hiện tại
+                currentCoverPath = coverImg.src;
+                
+                // Điền thông tin vào form chỉnh sửa
+                document.getElementById('editTitle').value = title;
+                document.getElementById('editDescription').value = description;
+                document.getElementById('editCategory').value = category;
+                document.getElementById('editAuthor').value = author;
+                
+                // Hiển thị ảnh bìa hiện tại
+                const currentCoverPreview = document.getElementById('currentCoverPreview');
+                currentCoverPreview.src = currentCoverPath;
+                currentCoverPreview.style.display = 'block';
+                
+                // Xử lý ngày
+                if (date) {
+                    // Chuyển định dạng ngày từ ISO về yyyy-mm-dd cho input date
+                    const formattedDate = date.includes('T') 
+                        ? date.split('T')[0] 
+                        : date;
+                    document.getElementById('editDate').value = formattedDate;
+                } else {
+                    document.getElementById('editDate').value = '';
+                }
+                
+                document.getElementById('editCopies').value = copies;
+                
+                // Hiển thị modal chỉnh sửa
+                const editModal = new bootstrap.Modal(document.getElementById('editBookModal'));
+                editModal.show();
+            }
+        });
+        
+        // Xử lý sự kiện khi nhấn nút Lưu thay đổi
+        document.getElementById('btnSaveEdit').addEventListener('click', function() {
+            if (!currentEditRow) return;
+            
+            // Lấy giá trị từ form chỉnh sửa
+            const title = document.getElementById('editTitle').value;
+            const description = document.getElementById('editDescription').value;
+            const category = document.getElementById('editCategory').value;
+            const author = document.getElementById('editAuthor').value;
+            const date = document.getElementById('editDate').value;
+            const copies = document.getElementById('editCopies').value;
+            
+            // Kiểm tra dữ liệu
+            if (!title || !author || !copies) {
+                alert('Vui lòng điền đầy đủ thông tin bắt buộc!');
+                return;
+            }
+            
+            // Xử lý file ảnh bìa mới nếu có
+            let coverUrl = currentCoverPath; // Giữ ảnh bìa hiện tại
+            const fileInput = document.getElementById('editCover');
+            if (fileInput.files && fileInput.files[0]) {
+                // Thực tế cần upload file lên server
+                // Ở đây chỉ giả lập bằng cách sử dụng URL tạm thời
+                coverUrl = URL.createObjectURL(fileInput.files[0]);
+            }
+            
+            // Cập nhật thông tin trong dòng hiện tại
+            const cells = currentEditRow.querySelectorAll('td');
+            cells[0].textContent = title;
+            cells[1].textContent = description;
+            cells[2].textContent = category;
+            cells[3].textContent = author;
+            cells[4].querySelector('img').src = coverUrl;
+            cells[5].textContent = date;
+            cells[6].textContent = copies;
+            
+            // Đóng modal
+            const editModal = bootstrap.Modal.getInstance(document.getElementById('editBookModal'));
+            editModal.hide();
+            
+            // Reset biến lưu trữ dòng hiện tại
+            currentEditRow = null;
+            currentCoverPath = "";
+        });
+        
+        // Thêm chức năng xóa sách khi nhấn nút xóa
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.btn-danger')) {
+                if (confirm('Bạn có chắc chắn muốn xóa sách này?')) {
+                    const row = e.target.closest('tr');
+                    row.remove();
+                }
+            }
+        });
+    </script>
+</body>
+</html> 

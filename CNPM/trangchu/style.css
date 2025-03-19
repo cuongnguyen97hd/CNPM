@@ -1,0 +1,78 @@
+/* CSS cho trang chủ */
+
+.logo-header {
+    height: 50px;
+    width: auto;
+}
+
+.sidebar {
+    width: 230px;
+    min-height: calc(100vh - 70px);
+}
+
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid #fff;
+}
+
+.card {
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng hover cho các card thống kê */
+.bg-primary:hover, .bg-success:hover, .bg-warning:hover, .bg-danger:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.bg-primary:hover {
+    background-color: #0069d9 !important;
+}
+
+.bg-success:hover {
+    background-color: #218838 !important;
+}
+
+.bg-warning:hover {
+    background-color: #e0a800 !important;
+}
+
+.bg-danger:hover {
+    background-color: #c82333 !important;
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+}
+
+.table thead th {
+    border-top: none;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 500;
+}
+
+.bg-primary {
+    background-color: #007bff !important;
+}
+
+.bg-success {
+    background-color: #28a745 !important;
+}
+
+.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+/* Tùy chỉnh bảng */
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}

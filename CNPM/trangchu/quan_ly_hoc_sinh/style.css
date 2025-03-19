@@ -1,0 +1,91 @@
+.stat-box {
+    min-height: 150px; /* Đảm bảo các ô có cùng chiều cao */
+    display: flex;
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+    text-align: center;
+}
+
+/* CSS cho trang quản lý học sinh */
+
+.logo-header {
+    height: 50px;
+    width: auto;
+}
+
+.sidebar {
+    width: 230px;
+    min-height: calc(100vh - 70px);
+}
+
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid #fff;
+}
+
+.table-success {
+    background-color: #00a65a !important;
+    color: white;
+}
+
+/* Adjust buttons in the actions column */
+.btn-warning {
+    background-color: #f39c12;
+    border-color: #f39c12;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dd4b39;
+    border-color: #dd4b39;
+}
+
+/* Tùy chỉnh table */
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 500;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Modal thêm học sinh mới */
+.modal-content {
+    border-radius: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.modal-header {
+    padding: 15px 20px;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    padding: 15px 20px;
+}
+
+.modal-title {
+    font-weight: 500;
+}
+
+.modal input.form-control {
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    border-radius: 4px;
+}
+
+.modal .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.modal .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
