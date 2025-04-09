@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng Nhập - Hệ Thống Quản Lý Thư Viện</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="event.js"></script>
+</head>
+<body>
+    <!-- Thông báo -->
+    <div id="notification" class="notification" style="display: none;">
+        <div class="notification-content">
+            <i id="notification-icon" class="fas"></i>
+            <span id="notification-message"></span>
+        </div>
+    </div>
+
+    <div class="login-container">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+        <h1>ĐĂNG NHẬP</h1>
+        <h2>HỆ THỐNG QUẢN LÝ THƯ VIỆN</h2>
+        
+        <form id="loginForm" onsubmit="validateAndRedirect(event)">
+            <div class="form-group">
+                <label for="username">Tên đăng nhập</label>
+                <input type="text" id="username" placeholder="">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="">
+                    <span class="password-toggle" onclick="togglePasswordVisibility()">
+                        <i class="fas fa-eye" id="togglePassword"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="remember-me">
+                <input type="checkbox" id="remember">
+                <label for="remember">Nhớ đăng nhập</label>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" class="login-button">Đăng nhập</button>
+            </div>
+            
+            <div class="forgot-password-container">
+                <a href="#" class="forgot-password">Quên mật khẩu?</a>
+            </div>
+            
+            <div class="register-container">
+                <p>Chưa có tài khoản? <a href="#" onclick="showRegisterForm()">Đăng ký ngay</a></p>
+            </div>
+        </form>
+
+        <!-- Form đăng ký -->
+        <form id="registerForm" style="display: none;" onsubmit="handleRegister(event)">
+            <div class="form-group">
+                <label for="reg-email">Email</label>
+                <input type="email" id="reg-email" placeholder="" required>
+            </div>
+
+            <div class="form-group">
+                <label for="reg-password">Mật khẩu</label>
+                <div class="password-container">
+                    <input type="password" id="reg-password" placeholder="" required>
+                    <span class="password-toggle" onclick="toggleRegisterPasswordVisibility()">
+                        <i class="fas fa-eye" id="toggleRegisterPassword"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="reg-confirm-password">Xác nhận mật khẩu</label>
+                <div class="password-container">
+                    <input type="password" id="reg-confirm-password" placeholder="" required>
+                    <span class="password-toggle" onclick="toggleConfirmPasswordVisibility()">
+                        <i class="fas fa-eye" id="toggleConfirmPassword"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="reg-firstname">Tên</label>
+                <input type="text" id="reg-firstname" placeholder="" required>
+            </div>
+
+            <div class="form-group">
+                <label for="reg-lastname">Họ</label>
+                <input type="text" id="reg-lastname" placeholder="" required>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" class="login-button">Đăng ký</button>
+            </div>
+
+            <div class="register-container">
+                <p>Đã có tài khoản? <a href="#" onclick="showLoginForm()">Đăng nhập</a></p>
+            </div>
+        </form>
+    </div>
+    <div class="background-pattern"></div>
+</body>
+</html>

@@ -1,0 +1,250 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    background-color: #f5f5f5;
+    overflow-y: auto;
+}
+
+.background-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-radial-gradient(circle at 10px 10px, rgba(200, 200, 200, 0.1) 0, rgba(200, 200, 200, 0.1) 1px, transparent 1px, transparent 100%);
+    background-size: 20px 20px;
+    z-index: -1;
+}
+
+.login-container {
+    background: white;
+    padding: 40px;
+    border-radius: 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    width: 400px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin: 40px 0;
+}
+
+/* Tùy chỉnh style cho thanh cuộn của body */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+.logo-container {
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+h1 {
+    color: #666;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+h2 {
+    color: #666;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Reset style cho tất cả các input */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border-color: #4c7bd9;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.remember-me label {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.button-container {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.login-button {
+    background: #4c7bd9;
+    color: white;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.forgot-password-container {
+    text-align: left;
+}
+
+.forgot-password {
+    color: #4c7bd9;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input[type="password"] {
+    padding-right: 35px; /* Để icon mắt không đè lên text */
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+    z-index: 2;
+}
+
+.password-toggle:hover {
+    color: #4c7bd9;
+}
+
+.register-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.register-container p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.register-container a {
+    color: #4c7bd9;
+    text-decoration: none;
+}
+
+.register-container a:hover {
+    text-decoration: underline;
+}
+
+#registerForm {
+    margin-top: 20px;
+}
+
+#registerForm .form-group {
+    margin-bottom: 15px;
+}
+
+#registerForm .button-container {
+    margin-top: 25px;
+}
+
+/* Thông báo */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    min-width: 300px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    animation: slideIn 0.5s ease-out;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notification.success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.notification.error {
+    background-color: #f44336;
+    color: white;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - Hệ thống quản lý thư viện</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="d-flex flex-column min-vh-100">
+        <!-- Header với logo trường -->
+        <header class="bg-white border-bottom py-2">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <img src="Logo_PTIT_University.png" alt="Logo trường" class="logo-header">
+                        <div class="ms-3">
+                            <h5 class="mb-0 text-primary fw-bold">Học viện Công nghệ Bưu Chính Viễn Thông</h5>
+                            <small class="text-muted">Bộ Khoa học và Công nghệ</small>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="../dangnhap/index.html" class="btn btn-outline-danger btn-sm">
+                            <i class="fas fa-sign-out-alt me-1"></i>Đăng xuất
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main content container -->
+        <div class="d-flex flex-grow-1">
+            <!-- Sidebar -->
+            <nav class="sidebar bg-dark text-white py-3">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" href="index.html">
+                                <i class="fas fa-home me-2"></i> Trang chủ
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="tao_phieu_muon/index.html">
+                                <i class="fas fa-file-alt me-2"></i> Tạo phiếu mượn
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="quan_ly_hoc_sinh/index.html">
+                                <i class="fas fa-user-graduate me-2"></i> Quản lý học sinh
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="quan_ly_sach/index.html">
+                                <i class="fas fa-book me-2"></i> Quản lý sách
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="quan_ly_nhan_vien/index.html">
+                                <i class="fas fa-users me-2"></i> Quản lý nhân viên
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <main class="flex-grow-1 bg-light p-4">
+                <h2 class="mb-4">Dashboard</h2>
+                
+                <!-- Thống kê -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card text-white bg-primary mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Tổng số người đọc</h5>
+                                <h2 class="card-text">0</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-white bg-success mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Tổng số sách</h5>
+                                <h2 class="card-text">0</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-white bg-warning mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Tổng số sách đã thanh lý</h5>
+                                <h2 class="card-text">0</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-white bg-danger mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Tổng số sách mượn</h5>
+                                <h2 class="card-text">0</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Thống kê gần đây -->
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-light">
+                                <h5 class="mb-0">Sách mượn gần đây</h5>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Tiêu đề</th>
+                                            <th>Người mượn</th>
+                                            <th>Ngày mượn</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Dữ liệu sẽ được thêm động bằng JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-light">
+                                <h5 class="mb-0">Người đọc mới</h5>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Họ tên</th>
+                                            <th>Email</th>
+                                            <th>Ngày đăng ký</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Dữ liệu sẽ được thêm động bằng JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
